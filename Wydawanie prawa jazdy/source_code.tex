@@ -1,0 +1,71 @@
+\documentclass[a4paper, 12pt]{article}
+\usepackage[T1]{fontenc}
+\usepackage{polski}
+\usepackage[utf8]{inputenc}
+\usepackage[polish]{babel}
+\usepackage[margin=1in]{geometry}
+\usepackage{graphicx}
+\usepackage{wrapfig}
+\usepackage{fancyhdr}
+\usepackage{lastpage}
+\usepackage[ddmmyyyy]{datetime}
+\renewcommand{\dateseparator}{/}
+\fancyhead{}
+\renewcommand{\headrulewidth}{0pt}
+
+\pagestyle{fancy}
+\cfoot{\thepage\hspace{1pt}/\pageref{LastPage}}
+
+
+\begin{document}
+
+
+\begin{wrapfigure}{L}{20px}
+\includegraphics[width=1.5cm,height=1.3cm,keepaspectratio]{logo_ee.png}
+\end{wrapfigure}
+
+Politechnika Warszawska 
+\hfill Data utworzenia: 02/03/2016
+
+Wydział Elektryczny
+\hfill Ostatnia modyfikacja: \today
+
+\hfill Wersja: A1
+
+\quad
+\begin{center}
+\center \Huge System ewidencji pojazdów i kierowców 
+\center \large Wydawanie prawa jazdy
+\vspace{0.5cm}\\
+\small Autorzy: Adam Gryczka, Michał Jereczek
+\end{center}
+
+\tableofcontents
+\pagebreak
+
+\section{Uproszczona wizja procesu}
+\begin{enumerate}
+	\item System WORD wysyła informacje o nowych zleceniach do systemu cyklicznie o północy w poniedziałek, wtorek, środę i czwartek.
+    \item System przetwarza otrzymane informacje, tworzy zgłoszenia dla systemu WPW cyklicznie w każdy piątek tygodnia o godzinie 10.
+    \item WPW po realizacji danego zgłoszenia (wysłania paczki z prawami jazdy do danego wydziału komunikacji) aktualizuje status zgłoszenia w naszym systemie.
+    \item Wydział Komunikacji otrzymuje przesyłkę, po czym urzędnik w systemie aktualizuje status zgłoszenia. 
+    \item System wysyła informację o możliwości odbioru prawa jazdy do petenta.  
+    \item Petent zgłasza się osobiście w wydziale komunikacji, wypełnia potwierdzenie odbioru dokumentu i urzędnik rejestruje obiór w systemie.
+    \item W przypadku nieodebrania prawa jazdy w ciągu miesiąca urzędnik otrzymuje informacje od  zaistniałej sytuacji od systemu.
+\end{enumerate}
+
+\pagebreak
+% \section{Historia zmian}
+% \begin{center}
+%     \begin{tabular}{ | p{0.5cm} | p{4.5cm} | p{6cm} | p{2cm} |p{1.2cm} |}
+%     \hline
+%     Nr. & Osoba & Zmiana & Data & Wersja 
+%     \\ \hline
+%     2. & Michał Jereczek & Dodanie daty do historii zmian & 30/10/2015  & A2
+%     \\ \hline
+%     1. & Michał Jereczek & Dodanie szablonu dokumentu formalnego & 22/10/2015  & A1
+%     \\ \hline
+%     \end{tabular}
+% \end{center}
+
+\end{document}
